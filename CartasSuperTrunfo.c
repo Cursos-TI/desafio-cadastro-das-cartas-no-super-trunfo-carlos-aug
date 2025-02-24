@@ -4,7 +4,7 @@ int main() {
   //carta_1
   char estado, codigoCarta[30], nomeCidade[30];
   int populacao, numPontosTuristicos;
-  float areaCidade, pib, densidade, pibPercapita; 
+  float areaCidade, pib, densidade, pibPercapita, superPoder; 
 
   printf("Carta 1: \n");
   printf("Insira uma letra de 'A' a 'H': ");
@@ -41,6 +41,15 @@ int main() {
   printf("Densidade Populacional: %f\n", densidade);
   printf("PIB per Capita: %f\n", pibPercapita);
 
+  /*
+  1.superpoder converte explicitamente int para float antes da soma
+  2. 1.f / densidade garante que o inverso da densidade seja tratado como float
+  */
+ superPoder = (float)populacao + areaCidade + pib + (float)numPontosTuristicos + pibPercapita + (1.0f / densidade);
+ printf("Super Poder: %f\n", superPoder);
+  
+
+
   //Carta_2
   printf("Carta 2: \n");
   printf("Insira uma letra de 'A' a 'H': \n");
@@ -66,6 +75,7 @@ int main() {
   
   densidade = populacao / areaCidade;
   pibPercapita = pib / populacao;
+ 
 
   printf("Estado: %c\n", estado);
   printf("Código da Carta: %s\n", codigoCarta);
@@ -76,7 +86,10 @@ int main() {
   printf("Número de pontos turísticos: %d", numPontosTuristicos);
   printf("Densidade Populacional: %f\n", densidade);
   printf("PIB per Capita: %f\n", pibPercapita);
-  
+
+  superPoder = (float)populacao + areaCidade + pib + (float)numPontosTuristicos + pibPercapita + (1.0f / densidade);
+  printf("Super Poder: %f\n", superPoder);
+
   return 0;
 
 }
