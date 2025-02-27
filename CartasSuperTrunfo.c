@@ -20,13 +20,13 @@ int main() {
   scanf(" %d", &populacao);
 
   printf("Área (em km²): ");
-  scanf(" %f", &areaCidade);
+  scanf(" %.2f", &areaCidade);
 
   printf("PIB: ");
-  scanf(" %f", &pib);
+  scanf(" %.2f", &pib);
   
   printf("Número de pontos turísticos: ");
-  scanf(" %d", &numPontosTuristicos);
+  scanf(" %d", &numPontosTuristicos );
 
   densidade = (float)populacao / areaCidade;
   pibPercapita = (float)pib / populacao;
