@@ -123,4 +123,6 @@ int main() {
   printf("Super Poder: Carta %d venceu \n", vencedoraSuperPoder);
 
   return 0;
+
+  //teste sicronização
 }
